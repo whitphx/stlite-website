@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Github, ExternalLink, Globe, Cpu, Server, Cog, Layout, Share2, Globe2, Zap, Code2, Laptop, Rocket, ArrowRight, Play, X, Lock } from "lucide-react"
+import { Github, ExternalLink, Globe, Cpu, Server, Cog, Layout, Share2, Globe2, Zap, Code2, Laptop, Rocket, ArrowRight, Play, X, Lock, Heart } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 // Mock function to check network speed and type
@@ -215,7 +215,7 @@ st.write("Hello, Stlite!")
           }`}>Stlite</span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          {['features', 'deployment-options', 'get-started', 'how-it-works', 'community'].map((section) => (
+          {['features', 'streamlit-and-stlite', 'deployment-options', 'get-started', 'how-it-works', 'community'].map((section) => (
             <button
               key={section}
               onClick={() => scrollToSection(section)}
@@ -344,6 +344,23 @@ st.write("Hello, Stlite!")
                 <h3 className="text-xl font-bold text-gray-900 text-center">Versatile Usage</h3>
                 <p className="text-sm text-gray-500 text-center">From web applications to desktop software, Stlite adapts to your needs. Perfect for creating interactive data visualizations, prototypes, or full-fledged applications.</p>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="streamlit-and-stlite" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center text-center space-y-4">
+              <Heart className="h-12 w-12 text-pink-600" />
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">Streamlit and Stlite</h2>
+              <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Stlite is a derivative project that builds upon the excellent foundation laid by Streamlit. While Streamlit is a powerful and versatile framework for creating data applications, Stlite extends its capabilities to cover use cases that Streamlit wasn't originally designed for.
+              </p>
+              <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                We have deep respect for Streamlit and recognize its strengths in server-based deployments. Stlite complements Streamlit by enabling browser-native execution, allowing developers to run Streamlit apps without a dedicated server. This opens up new possibilities for prototyping, sharing, and deploying Streamlit applications.
+              </p>
+              <p className="max-w-[800px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                By choosing Stlite, you're not moving away from Streamlit, but rather expanding the horizons of what's possible with your Streamlit applications.
+              </p>
             </div>
           </div>
         </section>
