@@ -108,7 +108,7 @@ st.line_chart(data)
     { id: 'frontend', name: 'Stlite Frontend', icon: Layout },
     { id: 'webworker', name: 'WebWorker', icon: Cog },
     { id: 'pythonserver', name: 'Stlite Python Server', icon: Server },
-    { id: 'pyodide', name: 'Pyodide (Wasm CPython)', icon: Python },
+    { id: 'pyodide', name: 'Pyodide (Wasm CPython)', icon: Code2 },
     { id: 'wasm', name: 'WebAssembly Runtime', icon: Cpu },
     { id: 'browser', name: 'Web Browser / Desktop App', icon: Globe },
   ]
