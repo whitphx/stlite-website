@@ -105,12 +105,12 @@ st.line_chart(data)
   }
 
   const techStackLayers = [
-    { id: 'browser', name: 'Web Browser / Desktop App', icon: Globe },
-    { id: 'wasm', name: 'WebAssembly Runtime', icon: Cpu },
-    { id: 'pyodide', name: 'Pyodide (Wasm CPython)', icon: Code2 },
-    { id: 'pythonserver', name: 'Stlite Python Server', icon: Server },
-    { id: 'webworker', name: 'WebWorker', icon: Cog },
     { id: 'frontend', name: 'Stlite Frontend', icon: Layout },
+    { id: 'webworker', name: 'WebWorker', icon: Cog },
+    { id: 'pythonserver', name: 'Stlite Python Server', icon: Server },
+    { id: 'pyodide', name: 'Pyodide (Wasm CPython)', icon: Python },
+    { id: 'wasm', name: 'WebAssembly Runtime', icon: Cpu },
+    { id: 'browser', name: 'Web Browser / Desktop App', icon: Globe },
   ]
 
   const deploymentOptions = [
@@ -118,7 +118,7 @@ st.line_chart(data)
       id: "web-sharing",
       title: "Stlite Sharing",
       icon: Share2,
-      description: "A web platform designed for developing and sharing Streamlit apps powered by Stlite. Perfect for quick prototypes and demonstrations.",
+      description: "A web platform designed for developing and sharing Streamlit apps powered by Stlite. Perfect for quick prototypes and demonstrations. Generates a sharable URL without sending or storing data on remote servers.",
       image: "/placeholder.svg?height=200&width=400",
       getStarted: (
         <>
@@ -130,6 +130,7 @@ st.line_chart(data)
             <li>Click "Run" to see your app in action</li>
             <li>Share the unique URL with others</li>
           </ol>
+          <p className="mb-4">Stlite Sharing generates a single static HTML file containing your app and its data, ensuring privacy and easy distribution.</p>
           <Button className="bg-pink-600 text-white hover:bg-pink-700">
             Try Stlite Sharing
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -141,7 +142,7 @@ st.line_chart(data)
       id: "self-hosted",
       title: "Self-hosted Web Pages",
       icon: Globe2,
-      description: "Host your own web pages by importing the Stlite code and executing your Streamlit apps. Works even on static web pages, giving you full control over your deployment.",
+      description: "Host your own web pages by importing the Stlite code and executing your Streamlit apps. Works even on static web pages, giving you full control over your deployment. Can be used to create Progressive Web Apps (PWAs) for offline capability and desktop-app-like experience.",
       image: "/placeholder.svg?height=200&width=400",
       getStarted: (
         <>
@@ -151,6 +152,7 @@ st.line_chart(data)
             <li>Include the Stlite JavaScript library</li>
             <li>Write your Streamlit app code</li>
             <li>Use the stlite.mount() function to run your app</li>
+            <li>Optionally, configure as a PWA for offline use</li>
           </ol>
           <div className="bg-gray-100 p-4 rounded-lg mb-4">
             <pre className="text-sm overflow-x-auto">
